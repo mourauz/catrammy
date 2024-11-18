@@ -1,0 +1,154 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+}
+
+body {
+    background: url('/static/imagens/gatomusga.jpg') no-repeat center center fixed; /* Imagem de fundo */
+    background-size: cover; /* Cobrir toda a área */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh; /* Garante que ocupe a tela inteira */
+}
+
+.container {
+    border-radius: 30px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.35);
+    width: 500px; /* Largura padrão */
+    max-width: 90%; /* Garante responsividade */
+    min-height: 600px; /* Aumenta altura para enquadramento completo */
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    transition: transform 0.4s ease-in-out;
+    align-items: center;
+    flex-direction: column;
+    background-color: #fff;
+}
+
+.container p {
+    font-size: 20px;
+    line-height: 22px;
+    letter-spacing: 0.3px;
+    margin: 20px 0;
+}
+
+.container span {
+    font-size: 14px;
+}
+
+.container a {
+    color: #333;
+    font-size: 14px;
+    text-decoration: none;
+    margin: 15px 0 10px;
+}
+
+.container button {
+    background-color: #512da8;
+    color: #fff;
+    font-size: 14px;
+    padding: 12px 50px;
+    border: 1px solid transparent;
+    border-radius: 8px;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+    margin-top: 20px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.container form {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    width: 100%;
+}
+
+.container input {
+    background-color: #eee;
+    border: none;
+    margin: 12px 0;
+    padding: 12px 20px;
+    font-size: 14px;
+    border-radius: 8px;
+    width: 100%;
+    outline: none;
+}
+
+.social-icons {
+    margin: 25px 0;
+}
+
+.social-icons a {
+    border: 1px solid #ccc;
+    border-radius: 20%;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 5px;
+    width: 45px;
+    height: 45px;
+}
+
+#error-message.error {
+    color: red;
+    font-size: 0.9em;
+    margin-top: 10px;
+    text-align: center;
+}
+
+/* Responsividade para telas menores */
+@media (max-width: 480px) {
+    body {
+        padding: 10px;
+    }
+
+    header h1 {
+        font-size: 1.5rem;
+    }
+
+    header p {
+        font-size: 0.9rem;
+    }
+
+    .form-section h2 {
+        font-size: 1.3rem;
+    }
+
+    input {
+        padding: 8px;
+        font-size: 0.9rem;
+    }
+
+    button.submit-btn {
+        font-size: 0.9rem;
+        padding: 8px;
+    }
+
+    footer p {
+        font-size: 0.8rem;
+    }
+}
+
+/* Melhorias para tablets */
+@media (max-width: 768px) {
+    header h1 {
+        font-size: 1.7rem;
+    }
+
+    header p {
+        font-size: 1rem;
+    }
+
+    .form-section h2 {
+        font-size: 1.4rem;
+    }
+}

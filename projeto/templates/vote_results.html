@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resultados da Votação</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>Resultados da Votação</h1>
+        <table>
+            <thead>
+                <tr>
+                    <th>ID do Usuário</th>
+                    <th>Nome do Usuário</th>
+                    <th>Escolha</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for vote in votes %}
+                    <tr>
+                        <td>{{ vote.user_id }}</td>
+                        <td>{{ vote.user.username }}</td>
+                        <td>{{ vote.choice }}</td>
+                    </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+        <a href="{{ url_for('vote') }}">Voltar para Votar</a>
+    </div>
+</body>
+</html>

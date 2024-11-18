@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+  <link rel="icon" type="image/x-icon" href="{{ url_for('static', filename='imagens/gato-preto.ico') }}">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+
+
+  <title>CATRAMMY</title>
+</head>
+<body>
+  <div class="container">
+    <h1 class="">Bem-vindo ao Catrammy</h1>
+    
+    {% with messages = get_flashed_messages(with_categories=true) %}
+        {% if messages %}
+            <ul>
+            {% for category, message in messages %}
+                <li class="{{ category }}">{{ message }}</li>
+            {% endfor %}
+            </ul>
+        {% endif %}
+    {% endwith %}
+
+    <a href="{{ url_for('login') }}" id="login-btn" class="link-action">LOGIN</a> | 
+    <a href="{{ url_for('register') }}" id="cadastro-btn" class="link-action">CADASTRO</a>
+    
+  </div>
+  
+  <div class="informacoes">
+    <h2>Sobre o nosso site</h2>
+    <p>Este é um exemplo de página de login interativa com design moderno e animações suaves.</p>
+  </div>
+
+  <!-- Div de ícones sociais -->
+  <div class="btn-social">
+    <a href="https://www.instagram.com/gaveigaa/" target="_blank">
+      <button><i class="bi bi-instagram"></i></button>
+    </a>
+    <a href="https://www.linkedin.com/in/gabriel-moura-a8bab520a/" target="_blank">
+      <button><i class="bi bi-linkedin"></i></button>
+    </a>
+    <a href="https://github.com/mourauz" target="_blank">
+      <button><i class="bi bi-github"></i></button>
+    </a>
+  </div>
+  
+</body>
+</html>

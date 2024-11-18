@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="/static/styleeee.css">
+  <link rel="icon" type="image/x-icon" href="{{ url_for('static', filename='imagens/gato-preto.ico') }}">
+  <title>Votação Musical 2024</title>
+</head>
+<body>
+  <header>
+    <h1>Vote no seu Artista Favorito!</h1>
+    <p>Ajude seu ídolo a ganhar o prêmio.</p>
+  </header>
+
+  <main>
+    <!-- Seção de Artistas -->
+    <section class="voting-grid">
+      <h2>Artistas</h2>
+      <div class="card">
+        <img src="/static/imagens/artist/billie.png" alt="Artista 1">
+        <h3>Billie Eilish</h3>
+        <button class="vote-btn" data-artist="Artista 1">Votar</button>
+      </div>
+      <div class="card">
+        <img src="/static/imagens/artist/travis.jpg" alt="Artista 2">
+        <h3>Travis Scott</h3>
+        <button class="vote-btn" data-artist="Artista 2">Votar</button>
+      </div>
+      <div class="card">
+        <img src="/static/imagens/artist/the weeknd.jpeg" alt="Artista 3">
+        <h3>The Weeknd</h3>
+        <button class="vote-btn" data-artist="Artista 3">Votar</button>
+      </div>
+      <div class="card">
+        <img src="/static/imagens/artist/tyler.png" alt="Artista 4">
+        <h3>Tyler, The Creator</h3>
+        <button class="vote-btn" data-artist="Artista 4">Votar</button>
+      </div>
+      <div class="card">
+        <img src="/static/imagens/artist/taylor.jpg" alt="Artista 5">
+        <h3>Taylor Swfit</h3>
+        <button class="vote-btn" data-artist="Artista 5">Votar</button>
+      </div>
+      <div class="card">
+        <img src="/static/imagens/artist/rihanna.jpg" alt="Artista 6">
+        <h3>Rihanna</h3>
+        <button class="vote-btn" data-artist="Artista 6">Votar</button>
+      </div>
+      <div class="card">
+        <img src="/static/imagens/artist/clairo.jpg" alt="Artista 7">
+        <h3>Clairo</h3>
+        <button class="vote-btn" data-artist="Artista 7">Votar</button>
+      </div>
+      <div class="card">
+        <img src="/static/imagens/artist/eminem.jpg" alt="Artista 8">
+        <h3>Eminem</h3>
+        <button class="vote-btn" data-artist="Artista 8">Votar</button>
+      </div>
+    </section>
+
+    <!-- Seção de Álbum do Ano -->
+    <section class="voting-grid">
+      <h2>Álbum do Ano</h2>
+      <div class="card">
+        <img src="https://via.placeholder.com/300" alt="Álbum 1">
+        <h3>Álbum 1</h3>
+        <button class="vote-btn" data-album="Álbum 1">Votar</button>
+      </div>
+      <div class="card">
+        <img src="https://via.placeholder.com/300" alt="Álbum 2">
+        <h3>Álbum 2</h3>
+        <button class="vote-btn" data-album="Álbum 2">Votar</button>
+      </div>
+      <div class="card">
+        <img src="https://via.placeholder.com/300" alt="Álbum 3">
+        <h3>Álbum 3</h3>
+        <button class="vote-btn" data-album="Álbum 3">Votar</button>
+      </div>
+      <div class="card">
+        <img src="https://via.placeholder.com/300" alt="Álbum 4">
+        <h3>Álbum 4</h3>
+        <button class="vote-btn" data-album="Álbum 4">Votar</button>
+      </div>
+      <div class="card">
+        <img src="https://via.placeholder.com/300" alt="Álbum 5">
+        <h3>Álbum 5</h3>
+        <button class="vote-btn" data-album="Álbum 5">Votar</button>
+      </div>
+      <div class="card">
+        <img src="https://via.placeholder.com/300" alt="Álbum 6">
+        <h3>Álbum 6</h3>
+        <button class="vote-btn" data-album="Álbum 6">Votar</button>
+      </div>
+      <div class="card">
+        <img src="https://via.placeholder.com/300" alt="Álbum 7">
+        <h3>Álbum 7</h3>
+        <button class="vote-btn" data-album="Álbum 7">Votar</button>
+      </div>
+      <div class="card">
+        <img src="https://via.placeholder.com/300" alt="Álbum 8">
+        <h3>Álbum 8</h3>
+        <button class="vote-btn" data-album="Álbum 8">Votar</button>
+      </div>
+    </section>
+
+    <!-- Seção de Música do Ano -->
+    <section class="voting-grid">
+      <h2>Música do Ano</h2>
+      <div class="card">
+        <img src="https://via.placeholder.com/300" alt="Música 1">
+        <h3>Música 1</h3>
+        <button class="vote-btn" data-song="Música 1">Votar</button>
+      </div>
+      <div class="card">
+        <img src="https://via.placeholder.com/300" alt="Música 2">
+        <h3>Música 2</h3>
+        <button class="vote-btn" data-song="Música 2">Votar</button>
+      </div>
+      <div class="card">
+        <img src="https://via.placeholder.com/300" alt="Música 3">
+        <h3>Música 3</h3>
+        <button class="vote-btn" data-song="Música 3">Votar</button>
+      </div>
+      <div class="card">
+        <img src="https://via.placeholder.com/300" alt="Música 4">
+        <h3>Música 4</h3>
+        <button class="vote-btn" data-song="Música 4">Votar</button>
+      </div>
+      <div class="card">
+        <img src="https://via.placeholder.com/300" alt="Música 5">
+        <h3>Música 5</h3>
+        <button class="vote-btn" data-song="Música 5">Votar</button>
+      </div>
+      <div class="card">
+        <img src="https://via.placeholder.com/300" alt="Música 6">
+        <h3>Música 6</h3>
+        <button class="vote-btn" data-song="Música 6">Votar</button>
+      </div>
+      <div class="card">
+        <img src="https://via.placeholder.com/300" alt="Música 7">
+        <h3>Música 7</h3>
+        <button class="vote-btn" data-song="Música 7">Votar</button>
+      </div>
+      <div class="card">
+        <img src="https://via.placeholder.com/300" alt="Música 8">
+        <h3>Música 8</h3>
+        <button class="vote-btn" data-song="Música 8">Votar</button>
+      </div>
+    </section>
+
+    <!-- Mensagem de agradecimento -->
+    <section id="thanks-message" style="display: none;">
+      <h2>Obrigado por votar!</h2>
+      <p>Seu voto foi registrado com sucesso.</p>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2024 Votação Musical. Todos os direitos reservados.</p>
+  </footer>
+
+  <script src="/static/script.js"></script>
+</body>
+</html>
