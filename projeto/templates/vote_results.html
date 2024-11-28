@@ -4,21 +4,23 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Resultados da Votação</title>
-    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='styleeee.css') }}">
 </head>
 <body>
     <div class="container">
         <h1>Resultados da Votação</h1>
+
+        <h2>Artistas</h2>
         <table>
             <thead>
                 <tr>
                     <th>ID do Usuário</th>
                     <th>Nome do Usuário</th>
-                    <th>Escolha</th>
+                    <th>Artista Escolhido</th>
                 </tr>
             </thead>
             <tbody>
-                {% for vote in votes %}
+                {% for vote in artist_votes %}
                     <tr>
                         <td>{{ vote.user_id }}</td>
                         <td>{{ vote.user.username }}</td>
@@ -27,7 +29,48 @@
                 {% endfor %}
             </tbody>
         </table>
-        <a href="{{ url_for('vote') }}">Voltar para Votar</a>
+
+        <h2>Álbum do Ano</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>ID do Usuário</th>
+                    <th>Nome do Usuário</th>
+                    <th>Álbum Escolhido</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for vote in album_votes %}
+                    <tr>
+                        <td>{{ vote.user_id }}</td>
+                        <td>{{ vote.user.username }}</td>
+                        <td>{{ vote.choice }}</td>
+                    </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+
+        <h2>Música do Ano</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>ID do Usuário</th>
+                    <th>Nome do Usuário</th>
+                    <th>Música Escolhida</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for vote in song_votes %}
+                    <tr>
+                        <td>{{ vote.user_id }}</td>
+                        <td>{{ vote.user.username }}</td>
+                        <td>{{ vote.choice }}</td>
+                    </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+
+        <a href="{{ url_for('vote') }}">Voltar para Votação</a>
     </div>
 </body>
 </html>

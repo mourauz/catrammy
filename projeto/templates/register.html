@@ -9,24 +9,101 @@
   <title>Cadastro</title>
 </head>
 <body>
-  <div class="container" id="container">
-    <div class="form-container sign-up">
-      <form id="register-form" action="{{ url_for('register') }}" method="POST">
-        <h1>Create Account</h1>
+  <div class="container" >
+    <div class="form-container_sign-up">
+      <form id="singup" method="POST" action="{{ url_for('register') }}">
+        <h2>Criar Conta</h2>
+        
+        <!-- Ícones de redes sociais (se você for integrar) -->
         <div class="social-icons">
             <a href="#" class="icon"><i class="fa-brands fa-google-plus-g"></i></a>
             <a href="#" class="icon"><i class="fa-brands fa-facebook-f"></i></a>
             <a href="#" class="icon"><i class="fa-brands fa-github"></i></a>
         </div>
-        <span>Ou use um Email para se cadastrar</span>
-        <input type="text" id="new-username" name="username" placeholder="Usuário" required>
-        <input type="email" id="new-email" name="email" placeholder="Email" required>
-        <input type="password" id="new-password" name="password" placeholder="Senha" required>
-        <button type="submit">Cadastrar</button>
+      
+        <div class="input-box">
+          <input type="text" id="username" name="username"  autocomplete="off" placeholder="Usuário" required />
+          <label for="username">Usuário</label>
+      </div>
+      <div class="input-box">
+        <input type="text" id="email" name="email" autocomplete="off" placeholder="Email" required />
+        <label for="email">Email</label>
+    </div>
+      <div class="input-box">
+          <input type="password" id="password" name="password" autocomplete="off" placeholder="Senha" required />
+          <label for="password">Senha</label>
+      </div>
         <p id="message" class="message"></p>
-    </form>    
+        <button type="submit" class="btn">Login</button>
+
+      </form>    
     </div>
 
+    <span style="--i:1;"></span>
+    <span style="--i:2;"></span>
+    <span style="--i:3;"></span>
+    <span style="--i:4;"></span>
+    <span style="--i:5;"></span>
+    <span style="--i:6;"></span>
+    <span style="--i:7;"></span>
+    <span style="--i:8;"></span>
+    <span style="--i:9;"></span>
+    <span style="--i:10;"></span>
+    <span style="--i:11;"></span>
+    <span style="--i:12;"></span>
+    <span style="--i:13;"></span>
+    <span style="--i:14;"></span>
+    <span style="--i:15;"></span>
+    <span style="--i:16;"></span>
+    <span style="--i:17;"></span>
+    <span style="--i:18;"></span>
+    <span style="--i:19;"></span>
+    <span style="--i:20;"></span>
+    <span style="--i:21;"></span>
+    <span style="--i:22;"></span>
+    <span style="--i:23;"></span>
+    <span style="--i:24;"></span>
+    <span style="--i:25;"></span>
+    <span style="--i:26;"></span>
+    <span style="--i:27;"></span>
+    <span style="--i:28;"></span>
+    <span style="--i:29;"></span>
+    <span style="--i:30;"></span>
+    <span style="--i:31;"></span>
+    <span style="--i:32;"></span>
+    <span style="--i:33;"></span>
+    <span style="--i:34;"></span>
+    <span style="--i:35;"></span>
+    <span style="--i:36;"></span>
+    <span style="--i:37;"></span>
+    <span style="--i:38;"></span>
+    <span style="--i:39;"></span>
+    <span style="--i:40;"></span>
+    <span style="--i:41;"></span>
+    <span style="--i:42;"></span>
+    <span style="--i:43;"></span>
+    <span style="--i:44;"></span>
+    <span style="--i:45;"></span>
+    <span style="--i:46;"></span>
+    <span style="--i:47;"></span>
+    <span style="--i:48;"></span>
+    <span style="--i:49;"></span>
+    <span style="--i:50;"></span>
+
+  </div>
+
+  <!-- Exibir mensagens de flash -->
+  {% with messages = get_flashed_messages(with_categories=true) %}
+    {% if messages %}
+        <ul>
+            {% for category, message in messages %}
+                <li class="{{ category }}">{{ message }}</li>
+            {% endfor %}
+        </ul>
+    {% endif %}
+{% endwith %}
+
+  
   <script src="{{ url_for('static', filename='script.js') }}"></script>
 </body>
 </html>

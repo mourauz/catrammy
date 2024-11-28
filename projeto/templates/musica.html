@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="/static/styleeee.css">
+  <link rel="icon" type="image/x-icon" href="{{ url_for('static', filename='imagens/gato-preto.ico') }}">
+  <title>Votação Musical 2024</title>
+</head>
+<body>
+  <header>
+    <h1>Vote na sua Música Favorita!</h1>
+    <p>Ajude sua música favorita a ganhar o prêmio.</p>
+  </header>
+
+  <body>
+    <!-- Seção de Música do Ano -->
+    <section class="voting-grid">
+        <h2>Música do Ano</h2>
+        <form id="vote-musica-form" action="vote_results.html" method="GET" class="voting-grid">
+          <div class="card">
+            <img src="/static/imagens/musica/billiemusica.jpg" alt="Música 1">
+            <h3>Birds Of a Feather</h3>
+            <button class="vote-btn" data-song="Música 1" type="submit">Votar</button>
+          </div>
+          <div class="card">
+            <img src="static/imagens/musica/juna.jpeg" alt="Música 2">
+            <h3>Juna</h3>
+            <button class="vote-btn" data-song="Música 2" type="submit">Votar</button>
+          </div>
+          <div class="card">
+            <img src="static/imagens/musica/nights_like_this.png" alt="Música 3">
+            <h3>Night Like This</h3>
+            <button class="vote-btn" data-song="Música 3" type="submit">Votar</button>
+          </div>
+          <div class="card">
+            <img src="static/imagens/musica/linkpark.jpeg" alt="Música 4">
+            <h3>The Emptiness Machine</h3>
+            <button class="vote-btn" data-song="Música 4" type="submit">Votar</button>
+          </div>
+          <div class="card">
+            <img src="static/imagens/musica/tylermusica.jpeg" alt="Música 5">
+            <h3>St Chroma</h3>
+            <button class="vote-btn" data-song="Música 5" type="submit">Votar</button>
+          </div>
+        </form>
+    </section>
+
+    <!-- Mensagem de agradecimento -->
+    <section id="thanks-message" style="display: none;">
+      <h2>Obrigado por votar!</h2>
+      <p>Seu voto foi registrado com sucesso.</p>
+    </section>
+  </body>
+</html>

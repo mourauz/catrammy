@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="/static/styleeee.css">
+  <link rel="icon" type="image/x-icon" href="{{ url_for('static', filename='imagens/gato-preto.ico') }}">
+  <title>Votação Musical 2024</title>
+</head>
+<body>
+  <header>
+    <h1>Vote no seu Álbum Favorito!</h1>
+    <p>Ajude seu ídolo a ganhar o prêmio.</p>
+  </header>
+
+  <!-- Seção de Álbum do Ano -->
+  <section class="voting-grid">
+    <h2>Álbum do Ano</h2>
+    <form id="vote-album-form" action="{{ url_for('musica') }}" method="GET" class="voting-grid">
+      <div class="card">
+        <img src="/static/imagens/album/tayloralbum.jpeg" alt="The Tortured Poets Department">
+        <h3>The Tortured Poets Department</h3>
+        <button class="vote-btn" name="album" value="The Tortured Poets Department" type="button">Votar</button>
+      </div>
+      <div class="card">
+        <img src="/static/imagens/album/tyleralbum.jpeg" alt="Chromakopia">
+        <h3>Chromakopia</h3>
+        <button class="vote-btn" name="album" value="Chromakopia" type="button">Votar</button>
+      </div>
+      <div class="card">
+        <img src="/static/imagens/album/billiealbum.jpeg" alt="Hit Me Hard and Soft">
+        <h3>Hit Me Hard and Soft</h3>
+        <button class="vote-btn" name="album" value="Hit Me Hard and Soft" type="button">Votar</button>
+      </div>
+      <div class="card">
+        <img src="/static/imagens/album/kendrickalbum.jpg" alt="GNX">
+        <h3>GNX</h3>
+        <button class="vote-btn" name="album" value="GNX" type="button">Votar</button>
+      </div>
+      <div class="card">
+        <img src="/static/imagens/album/clairoalbum.jpeg" alt="Charm">
+        <h3>Charm</h3>
+        <button class="vote-btn" name="album" value="Charm" type="button">Votar</button>
+      </div>
+    </form>
+  </section>
+
+  <script src="/static/script.js"></script>
+</body>
+</html>
