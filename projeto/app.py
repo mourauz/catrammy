@@ -6,16 +6,16 @@ from datetime import timedelta
 
 app = Flask(__name__, template_folder='templates', static_folder='static')
 
-# Configurações do Flask
-app.secret_key = os.getenv('SECRET_KEY', 'chave_super_secreta')  # Definindo chave secreta
+
+app.secret_key = os.getenv('SECRET_KEY', '1234')  
 app.config['SQLALCHEMY_DATABASE_URI'] = 'mysql+pymysql://gabana:%21%40%23Gab2x22..@127.0.0.1:3306/usuarios_db'
 app.config['PERMANENT_SESSION_LIFETIME'] = timedelta(minutes=30)
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 
-# Inicializando SQLAlchemy
+
 db = SQLAlchemy(app)
 
-# Modelos
+
 class User(db.Model):
     id = db.Column(db.Integer, primary_key=True)
     username = db.Column(db.String(150), nullable=False, unique=True)
@@ -28,11 +28,11 @@ class Vote(db.Model):
     choice = db.Column(db.String(100), nullable=False)
     user = db.relationship('User', backref=db.backref('votes', lazy=True))
 
-# Inicializar banco de dados
+
 with app.app_context():
     db.create_all()
 
-# Rotas
+
 @app.route('/')
 def index():
     return render_template('index.html')
@@ -82,10 +82,10 @@ def login():
             session['user_id'] = user.id
             session['username'] = user.username
             flash('Login realizado com sucesso!', 'success')
-            return redirect(url_for('vote'))  # Redireciona para a página de votação após o login
+            return redirect(url_for('vote'))  
         else:
             flash('Usuário ou senha inválidos.', 'error')
-            return redirect(url_for('login'))  # Redireciona de volta para login em caso de erro
+            return redirect(url_for('login'))  
 
     return render_template('login.html')
 
@@ -95,7 +95,7 @@ def vote():
         flash('Por favor, faça login para acessar a votação.', 'warning')
         return redirect(url_for('login'))
 
-    # Lista de artistas
+    
     artists = [
         {'name': 'Billie Eilish', 'image': 'billie.png'},
         {'name': 'Travis Scott', 'image': 'travis.jpg'},
@@ -139,17 +139,14 @@ def vote():
 @app.route('/album', methods=['GET', 'POST'])
 def album():
     if request.method == 'POST':
-        # Pega o álbum escolhido
+        
         album_votado = request.form.get('album')
-        
-        # Aqui você pode fazer algo com o álbum votado, como salvar em um banco de dados
-        
-        # Após o voto, redireciona para a página de música
+    
         return redirect(url_for('musica'))
 
     return render_template('album.html')
 
-# Página de música
+
 @app.route('/musica')
 def musica():
     return render_template('musica.html')
@@ -163,7 +160,7 @@ def vote_results():
 def logout():
     session.clear()
     flash('Você foi desconectado', 'info')
-    return redirect(url_for('index'))  # redireciona para a página inicial
+    return redirect(url_for('index'))  
 
 @app.route('/favicon.ico')
 def favicon():
