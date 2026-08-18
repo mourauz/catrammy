@@ -8,7 +8,7 @@ app = Flask(__name__, template_folder='templates', static_folder='static')
 
 
 app.secret_key = os.getenv('SECRET_KEY', '1234')  
-app.config['SQLALCHEMY_DATABASE_URI'] = 'mysql+pymysql://gabana:%21%40%23Gab2x22..@127.0.0.1:3306/usuarios_db'
+app.config['SQLALCHEMY_DATABASE_URI'] = ''
 app.config['PERMANENT_SESSION_LIFETIME'] = timedelta(minutes=30)
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 
