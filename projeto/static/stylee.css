@@ -11,7 +11,7 @@ body {
     align-items: center;
     min-height: 100vh;
     background: url('/static/imagens/gatomusga.jpg') no-repeat center center fixed;
-    background-size: cover; /* Faz com que a imagem cubra toda a tela */
+    background-size: cover; 
 }
 .container {
     position: relative;
