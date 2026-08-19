@@ -187,6 +187,14 @@ document.addEventListener("DOMContentLoaded", function() {
         form.submit(); 
       }
     });
+
+   const container = document.querySelector('.container');
+
+   for (let i = 1; i <= 50; i++) {
+     const span = document.createElement('span');
+     span.style.setProperty('--i', i);
+     container.appendChild(span);
+}
   });
 
   
