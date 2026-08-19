@@ -11,8 +11,7 @@ body {
     align-items: center;
     min-height: 100vh;
     background: url('/static/imagens/gatomusga.jpg') no-repeat center center fixed;
-    background-size: cover; /* Faz com que a imagem cubra toda a tela */
-}
+    background-size: cover; 
 .container {
     position: relative;
     width: 256px;
@@ -183,7 +182,7 @@ h2 {
     }
 }
 
-/* Melhorias para tablets */
+
 @media (max-width: 768px) {
     header h1 {
         font-size: 1.7rem;
