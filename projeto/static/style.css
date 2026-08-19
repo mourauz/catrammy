@@ -1,4 +1,3 @@
-/* Estilos globais */
 * {
   margin: 0;
   padding: 0;
@@ -15,12 +14,9 @@ body {
   align-items: center;
   height: 100vh;
   color: #333;
-  transition: background-image 1s ease-in-out; /* Animação suave para a mudança de fundo */
+  transition: background-image 1s ease-in-out;
 }
 
-/* ------------------------------ Estilos da página de login ------------------------------ */
-
-/* .wrapper: Container para centralizar o conteúdo de login na tela */
 .wrapper {
   display: flex;
   justify-content: center;
@@ -29,7 +25,6 @@ body {
   background-color: #eee;
 }
 
-/* .login-container: Formulário de login */
 .login-container {
   background-color: #fff;
   border-radius: 8px;
@@ -40,21 +35,18 @@ body {
   width: 100%;
 }
 
-/* .brand-title: Título da marca */
 .brand-title {
   font-size: 36px;
   font-weight: bold;
   color: #007bff;
 }
 
-/* .brand-subtitle: Subtítulo abaixo do título da marca */
 .brand-subtitle {
   margin-top: 10px;
   font-size: 16px;
   color: #888;
 }
 
-/* Link de navegação para a página de cadastro ou ações relacionadas */
 .link-action {
   text-decoration: none;
   color: #007bff;
@@ -66,7 +58,6 @@ body {
   text-decoration: underline;
 }
 
-/* Estilos para os botões sociais */
 .social-buttons {
   margin-top: 20px;
 }
@@ -95,7 +86,6 @@ body {
   text-decoration: none;
 }
 
-/* Estilos para mensagens de erro ou sucesso */
 ul {
   margin-top: 20px;
 }
@@ -109,30 +99,25 @@ ul li.success {
   color: green;
 }
 
-/* ------------------------------ Estilos gerais e animações ------------------------------ */
-
-/* .container: Caixa centralizada de conteúdo */
 .container {
-  background-color: rgba(255, 255, 255, 0.8); /* Fundo semi-transparente */
+  background-color: rgba(255, 255, 255, 0.8);
   padding: 3em;
   align-items: center;
   justify-content: center;
   background-position: center;
-  flex-direction: column; /* Organiza os elementos verticalmente */
+  flex-direction: column;
   border-radius: 15px;
-  box-shadow: 0px 15px 25px rgba(0, 0, 0, 0.2); /* Sombra suave */
+  box-shadow: 0px 15px 25px rgba(0, 0, 0, 0.2);
   width: 100%;
   max-width: 450px;
   text-align: center;
-  transition: transform 0.4s ease-in-out; /* Animação de zoom */
+  transition: transform 0.4s ease-in-out;
 }
 
-/* Efeito de zoom ao passar o mouse */
 .container:hover {
   transform: scale(1.05);
 }
 
-/* Cabeçalho */
 h1 {
   color: #333;
   font-size: 2rem;
@@ -142,7 +127,6 @@ h1 {
   letter-spacing: 1px;
 }
 
-/* Labels de campos de formulário */
 label {
   display: block;
   margin-top: 1.2em;
@@ -151,8 +135,9 @@ label {
   transition: color 0.3s ease;
 }
 
-/* Estilos para campos de input (email, senha, etc.) */
-input[type="text"], input[type="password"], input[type="email"] {
+input[type="text"],
+input[type="password"],
+input[type="email"] {
   width: 100%;
   padding: 1em;
   margin-top: 0.5em;
@@ -162,13 +147,13 @@ input[type="text"], input[type="password"], input[type="email"] {
   transition: border 0.3s ease;
 }
 
-/* Efeito de foco nos campos de input */
-input[type="text"]:focus, input[type="password"]:focus, input[type="email"]:focus{
+input[type="text"]:focus,
+input[type="password"]:focus,
+input[type="email"]:focus {
   border-color: #007bff;
   outline: none;
 }
 
-/* Botão de login */
 button {
   margin-top: 1.5em;
   padding: 1em;
@@ -187,14 +172,12 @@ button:hover {
   background-color: #0056b3;
 }
 
-/* Mensagens de erro ou de resultado de ações */
 .message {
   color: red;
   font-size: 0.9em;
   margin-top: 0.5em;
 }
 
-/* Link de ação para ir para a página de cadastro ou recuperar senha */
 .link-action {
   background-color: #512da8;
   color: #fff;
@@ -210,25 +193,22 @@ button:hover {
   margin-top: 10px;
 }
 
-.link-action button:hover{
+.link-action button:hover {
   background-color: #ddf50b;
 }
 
-/* ------------------------------ Animação de fade-in ------------------------------ */
-
-/* Animação para fade-in de conteúdo */
 @keyframes fadeIn {
   0% {
     opacity: 0;
     transform: translateY(-20px);
   }
+
   100% {
     opacity: 1;
     transform: translateY(0);
   }
 }
 
-/* Adicionando a animação de fade-in */
 .container {
   max-width: 600px;
   margin: 0 auto;
@@ -237,9 +217,6 @@ button:hover {
   animation: fadeIn 1s ease-out;
 }
 
-/* ------------------------------ Estilo das informações adicionais ------------------------------ */
-
-/* .informacoes: Exibe informações adicionais após rolagem */
 .informacoes {
   margin-top: 50px;
   text-align: center;
@@ -250,19 +227,16 @@ button:hover {
   transition: all 0.5s ease-in-out;
 }
 
-/* Torna as informações visíveis quando a página rola */
 .informacoes.visible {
   opacity: 1;
   transform: translateY(0);
 }
 
-/* Quando a página rola, as informações são exibidas */
 body.scrolled .informacoes {
   opacity: 1;
   transform: translateY(0);
 }
 
-/* ------------------------------ Rodapé ------------------------------ */
 footer {
   text-align: center;
   margin-top: 30px;
@@ -274,10 +248,7 @@ footer p {
   margin-top: 20px;
 }
 
-/* ------------------------------ Botões sociais fixos ------------------------------ */
-
-/* .btn-social: Botões sociais fixos na tela */
-.btn-social{
+.btn-social {
   position: fixed;
   border: none;
   bottom: 20px;
@@ -286,7 +257,6 @@ footer p {
   gap: 10px;
 }
 
-/* Estilo para os botões sociais */
 .btn-social button {
   background-color: #512da8;
   color: #fff;
@@ -302,9 +272,6 @@ footer p {
   background-color: #ddf50b;
 }
 
-/* ------------------------------ Responsividade ------------------------------ */
-
-/* Ajuste de responsividade para telas pequenas */
 @media (max-width: 600px) {
   .container {
     padding: 1.5em;
@@ -315,19 +282,15 @@ footer p {
   }
 }
 
-/* ------------------------------ Ajustes para layout e usabilidade ------------------------------ */
-
-.informacoes{
+.informacoes {
   position: fixed;
 }
 
-/* Estilo para as informações adicionais */
 body.scrolled .informacoes {
   opacity: 1;
   transform: translateY(0);
 }
 
-/* Ajustes para melhorar o layout geral */
 body {
   font-family: 'Arial', sans-serif;
   background-color: #f1f1f1;
@@ -339,7 +302,6 @@ body {
   margin: 0;
 }
 
-/* Container de login mais compacto */
 .login-section {
   position: relative;
   width: 100%;
@@ -351,7 +313,6 @@ body {
   text-align: center;
 }
 
-/* Estilos do título */
 h1 {
   font-size: 2rem;
   margin-bottom: 1rem;
@@ -359,8 +320,8 @@ h1 {
   color: #333;
 }
 
-/* Estilos para os inputs de email e senha */
-input[type="email"], input[type="password"] {
+input[type="email"],
+input[type="password"] {
   width: 100%;
   padding: 1em;
   margin-top: 10px;
@@ -369,7 +330,6 @@ input[type="email"], input[type="password"] {
   font-size: 1em;
 }
 
-/* Estilo do botão de login */
 button {
   padding: 15px;
   background-color: #007bff;
@@ -385,50 +345,48 @@ button:hover {
   background-color: #0056b3;
 }
 
-/* Responsividade para telas menores */
 @media (max-width: 480px) {
   body {
-      padding: 10px;
+    padding: 10px;
   }
 
   header h1 {
-      font-size: 1.5rem;
+    font-size: 1.5rem;
   }
 
   header p {
-      font-size: 0.9rem;
+    font-size: 0.9rem;
   }
 
   .form-section h2 {
-      font-size: 1.3rem;
+    font-size: 1.3rem;
   }
 
   input {
-      padding: 8px;
-      font-size: 0.9rem;
+    padding: 8px;
+    font-size: 0.9rem;
   }
 
   button.submit-btn {
-      font-size: 0.9rem;
-      padding: 8px;
+    font-size: 0.9rem;
+    padding: 8px;
   }
 
   footer p {
-      font-size: 0.8rem;
+    font-size: 0.8rem;
   }
 }
 
-/* Melhorias para tablets */
 @media (max-width: 768px) {
   header h1 {
-      font-size: 1.7rem;
+    font-size: 1.7rem;
   }
 
   header p {
-      font-size: 1rem;
+    font-size: 1rem;
   }
 
   .form-section h2 {
-      font-size: 1.4rem;
+    font-size: 1.4rem;
   }
 }
