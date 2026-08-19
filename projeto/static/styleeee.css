@@ -2,7 +2,7 @@ html, body {
   height: 100%;
   margin: 0;
   padding: 0;
-  overflow-y: auto; /* Permite a rolagem vertical */
+  overflow-y: auto; 
 }
 
 main {
@@ -11,8 +11,8 @@ main {
 
 body {
   font-family: 'Arial', sans-serif;
-  background: linear-gradient(45deg, #ff6b6b, #ffcc00);  /* Cor de fundo inicial */
-  transition: background 0.5s ease;  /* Animação de transição de cor suave */
+  background: linear-gradient(45deg, #ff6b6b, #ffcc00); 
+  transition: background 0.5s ease;  
   background-color: #121212;
   color: #ffffff;
   text-align: center;
@@ -22,11 +22,11 @@ body {
   align-items: center;
 }
 body:hover {
-  background: linear-gradient(45deg, #6bff6b, #00ccff);  /* Cores ao passar o mouse */
+  background: linear-gradient(45deg, #6bff6b, #00ccff);  
 }
 
 body:hover h1 {
-  color: #333;  /* Cor do texto ao passar o mouse */
+  color: #333;  
 }
 
 header {
@@ -65,12 +65,12 @@ p {
   justify-content: center;
   gap: 20px;
   padding: 20px;
-  max-width: 1200px; /* Define a largura máxima da grade */
+  max-width: 1200px; 
   margin: 0 auto;
 }
 
 .card {
-  width: 300px; /* Define uma largura fixa para as cartas */
+  width: 300px; 
   background-color: #1e1e1e;
   border: 1px solid #333;
   border-radius: 12px;
@@ -125,7 +125,7 @@ footer {
   }
 
   .card {
-    width: 80%; /* Cartões mais largos em telas menores */
+    width: 80%; 
   }
 
   h1 {
@@ -152,7 +152,7 @@ footer {
   }
 
   .card {
-    width: 90%; /* Cartões ainda mais largos em telas muito pequenas */
+    width: 90%; 
   }
 
   .vote-btn {
