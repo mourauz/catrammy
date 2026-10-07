@@ -1,2 +1,0 @@
-SECRET_KEY=catrammy_secret_key_2026
-DATABASE_URL=mysql+pymysql://root:laranja@localhost/catrammy
