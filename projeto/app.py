@@ -28,7 +28,7 @@ class User(db.Model):
 class Vote(db.Model):
     id = db.Column(db.Integer, primary_key=True)
     user_id = db.Column(db.Integer, db.ForeignKey('user.id', ondelete='CASCADE'), nullable=False)
-    # 'artist', 'album' ou 'song' — um voto por categoria por usuário.
+   
     category = db.Column(db.String(20), nullable=False)
     choice = db.Column(db.String(100), nullable=False)
     voted_at = db.Column(db.DateTime, nullable=False, default=datetime.utcnow)
