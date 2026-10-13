@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/base.css') }}">
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/vote.css') }}">
+  <link rel="icon" type="image/x-icon" href="{{ url_for('static', filename='imagens/gato-preto.ico') }}">
+  <title>Votação de Música - CATRAMMY</title>
+</head>
+<body class="vote-page">
+  <header class="vote-header">
+    <h1>Vote na sua Música Favorita!</h1>
+    <p>Etapa 3 de 3 — Ajude sua música favorita a ganhar o prêmio.</p>
+    <div class="progress-steps">
+      <span class="done"></span>
+      <span class="done"></span>
+      <span class="active"></span>
+    </div>
+  </header>
+
+  {% with messages = get_flashed_messages(with_categories=true) %}
+    {% if messages %}
+      <ul class="flash-messages">
+        {% for category, message in messages %}
+          <li class="{{ category }}">{{ message }}</li>
+        {% endfor %}
+      </ul>
+    {% endif %}
+  {% endwith %}
+
+  <main>
+    <section>
+      <form id="musica-form" class="voting-grid" data-vote-form data-confirm-label="música" action="{{ url_for('musica') }}" method="POST">
+        {% for song in songs %}
+        <div class="card">
+          <div class="card-media">
+            <img src="{{ url_for('static', filename='imagens/musica/' ~ song.image) }}" alt="{{ song.name }}" loading="lazy">
+            <div class="card-overlay">
+              <p class="card-bio">{{ song.bio }}</p>
+              <span class="card-tag">{{ tag }}</span>
+            </div>
+          </div>
+          <h3>{{ song.name }}</h3>
+          <button class="vote-btn" name="choice" value="{{ song.name }}" type="submit">Votar</button>
+        </div>
+        {% endfor %}
+      </form>
+    </section>
+  </main>
+
+  <footer class="vote-footer">
+    <p>CATRAMMY — Votação Musical</p>
+  </footer>
+
+  <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>

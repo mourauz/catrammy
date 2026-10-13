@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/base.css') }}">
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/vote.css') }}">
+  <link rel="icon" type="image/x-icon" href="{{ url_for('static', filename='imagens/gato-preto.ico') }}">
+  <title>Votação de Álbum - CATRAMMY</title>
+</head>
+<body class="vote-page">
+  <header class="vote-header">
+    <h1>Vote no seu Álbum Favorito!</h1>
+    <p>Etapa 2 de 3 — Ajude seu álbum preferido a ganhar o prêmio.</p>
+    <div class="progress-steps">
+      <span class="done"></span>
+      <span class="active"></span>
+      <span></span>
+    </div>
+  </header>
+
+  {% with messages = get_flashed_messages(with_categories=true) %}
+    {% if messages %}
+      <ul class="flash-messages">
+        {% for category, message in messages %}
+          <li class="{{ category }}">{{ message }}</li>
+        {% endfor %}
+      </ul>
+    {% endif %}
+  {% endwith %}
+
+  <main>
+    <section>
+      <form id="album-form" class="voting-grid" data-vote-form data-confirm-label="álbum" action="{{ url_for('album') }}" method="POST">
+        {% for album in albums %}
+        <div class="card">
+          <div class="card-media">
+            <img src="{{ url_for('static', filename='imagens/album/' ~ album.image) }}" alt="{{ album.name }}" loading="lazy">
+            <div class="card-overlay">
+              <p class="card-bio">{{ album.bio }}</p>
+              <span class="card-tag">{{ tag }}</span>
+            </div>
+          </div>
+          <h3>{{ album.name }}</h3>
+          <button class="vote-btn" name="choice" value="{{ album.name }}" type="submit">Votar</button>
+        </div>
+        {% endfor %}
+      </form>
+    </section>
+  </main>
+
+  <footer class="vote-footer">
+    <p>CATRAMMY — Votação Musical</p>
+  </footer>
+
+  <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>
